@@ -1,0 +1,46 @@
+body {
+    background-image: url("images/galaxy.jpg");
+    background-size: cover;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+.zoom{  
+    height:100vh;  
+    width:100%;  
+    display:grid;  
+    place-items:center;  
+    position:fixed;  
+    top:0;  
+    left:0;
+}
+.demo-dot {
+    animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  }
+  
+  .demo-dot::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  }
+  
+  @keyframes yAxis {
+    50% {
+      animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+      transform: translateY(-100px);
+    }
+  }
+  
+  @keyframes xAxis {
+    50% {
+      animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+      transform: translateX(100px);
+    }
+  }
